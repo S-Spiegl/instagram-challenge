@@ -1,8 +1,51 @@
 body {
-  padding: 50px;
+  /* padding: 50px; */
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
+}
+
+.whole-page {
+  justify-content: space-evenly;
+  background-color: aquamarine;
+  border: 1px solid;
+}
+
+.home-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 70vh;
+  background-color: aliceblue;
+}
+
+.home-title-and-welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: grey;
+}
+
+.home-login-and-signup-buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 30%;
+  width: 30%;
+  height: 50px;
+  justify-content: space-around;
+  background-color: cyan;
+}
+
+.home-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  width: 30%;
+  border: 1px solid;
+
 }
