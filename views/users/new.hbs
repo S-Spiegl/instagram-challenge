@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+<form id="new-user-form" action="/users" method="post">
+  <label for="name">Name: </label>
+  <input id="name" type="text" name="name" value="">
+  <label for="email">Email: </label>
+  <input id="email" type="email" name="email" value="">
+  <label for="password">Password: </label>
+  <input id="password" type="password" name="password" value="">
+  <input id="submit" type="submit" value="Sign up!">
+</form>
+<p>this form posts to /users, and the info is passed to the handler via the users router and ends up in the controller.
+  The controller then interacts with the model/database to store the info. It should then redirect to the login page</p>
