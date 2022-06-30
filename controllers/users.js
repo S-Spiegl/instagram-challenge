@@ -9,7 +9,7 @@ const UsersController = {
 
   Create: (req, res) => {
     const user = new User(req.body);
-    //create new user in database 
+    //create new user in database using the req body
     user.save((err) => {
       if (err) {
         throw err;

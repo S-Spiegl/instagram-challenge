@@ -9,6 +9,7 @@ const methodOverride = require("method-override"); //added from acebook
 const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const sessionsRouter = require('./routes/sessions')
+const profileRouter = require('./routes/profile')
 
 const app = express();
 
@@ -58,6 +59,7 @@ const sessionChecker = (req, res, next) => {
 app.use('/', homeRouter);
 app.use('/users', usersRouter);
 app.use('/sessions', sessionsRouter)
+app.use('/profile', sessionChecker, profileRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
