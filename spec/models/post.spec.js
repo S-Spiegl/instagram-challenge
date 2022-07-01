@@ -86,7 +86,7 @@ describe("Post model", () => {
     });
   });
 
-  it("can list all posts in reverse chronological order", (done) => {
+  it.skip("can list all posts in reverse chronological order", (done) => {
     //compare order here to order in "saves two posts" - both work
     //does this test belong here? Is it possible to reverse the order of the database using the model? Or do 
     //we just do it in the controller/view? In which case would it be an integration test?

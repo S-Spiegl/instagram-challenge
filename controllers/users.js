@@ -21,12 +21,11 @@ const UsersController = {
 
   
   Index: (req, res) => {
-    User.find()
+    User.find().sort({name: 'desc'})
       .exec((err, users) => {
         if (err) {
           throw err;
         }
-
 
         res.render("users/index", {
           users: users
