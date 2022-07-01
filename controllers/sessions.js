@@ -19,8 +19,15 @@ const SessionsController = {
         res.redirect("/sessions/new");
       } else {
         req.session.user = user;
-        res.redirect("/");
-        //change this to redirect to a profile or the feed
+        //need to understand the above line better
+        //where is user defined? (I think this is coming from the name of the table)
+        //is session/req.session.user a predefined term referring to whoever is logged in
+        //or have we defined it ourselves (I think it's the former)
+        //are we assigning the value of user to req.session.user or 
+        //the other way round? (I think it's the former, i.e. we're saying
+        //that the user whose credentials match the login details will be the session
+        //user)
+        res.redirect(`/profile/${req.session.user._id}`); 
       }
     });
   },

@@ -25,6 +25,14 @@ const ProfileController = {
       res.render("profile/index", {
         session: req.session.user,
         user: user,
+        //this last line is highly confusing.
+        //I believe it means that for the purposes of rendering the page (and 
+        //interpolating via handlebars, anything referred to as session will reference
+        //the person logged in (i.e. the req.session.user) and anything referred to as 
+        //user (i.e. the user before the colon) will reference the user rendered on the page,
+        //in this case whoever's profile we've been directed to (in this instance the two
+        //are the same, but I've illustrated how it might be used, e.g. to say, hello,
+        //{session user}, you're looking at {user}'s profile ))
       });
     });
   },

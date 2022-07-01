@@ -1,3 +1,9 @@
+//next steps - more spec tests
+//get a profile pic on the profile page
+//allow a user to post to the timeline 
+//eventually have an upload to the profile page (own feed) appear on the timeline...
+// 
+
 Instagram Challenge
 ===================
 

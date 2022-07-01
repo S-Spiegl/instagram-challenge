@@ -15,8 +15,23 @@ const UsersController = {
         throw err;
       }
       //take an error message as a callback, throw an error if there's an error...
-      res.status(201).redirect("/");
+      res.status(201).redirect("/sessions/new");
     });
+  },
+
+  
+  Index: (req, res) => {
+    User.find()
+      .exec((err, users) => {
+        if (err) {
+          throw err;
+        }
+
+
+        res.render("users/index", {
+          users: users
+        });
+    })
   },
 };
 

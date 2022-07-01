@@ -10,6 +10,7 @@ router.get('/', function(req, res, next) {
 router.get('/new', UsersController.New)
 router.post('/new', UsersController.New) 
 router.post('/', UsersController.Create)
+router.get('/all', UsersController.Index)
 //add a button to logout, call UsersController.Destroy
 
 module.exports = router;

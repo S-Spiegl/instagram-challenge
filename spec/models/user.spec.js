@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
 
 require("../mongodb_helper");
-const User = require("../models/user");
+const User = require("../../models/user");
 
 //why aren't these appearing in the test_database?????
+//ok, now they are... I have no idea what changed...
+//but now the second 'table' I created isn't appearing,
+//so I can see users but not posts... do I just wait?
+//half an hour later, posts have appeared... 
 
 describe("User model", () => {
   beforeEach((done) => {
